@@ -16,7 +16,7 @@ SI agent harnesses, including the clients documented in this repository, are not
 
 ## Services
 
-OpenCode and Visual Studio Code are the SI Team's primary clients for these services, so their guides are the main paths through this repository. Secondary CLI guides cover Claude Code for NASA Chat and Codex for both services. The presence of a guide does not change the service or system restrictions above.
+OpenCode and Visual Studio Code are the SI Team's primary clients for these services. The presence of a guide or template does not change the service or system restrictions above.
 
 ### NASA Chat
 
@@ -24,7 +24,13 @@ First [get a NASA Chat API key](docs/nasa-chat/api-key.md). Start with [OpenCode
 
 ### Mission AI
 
-Start with [OpenCode](docs/mission-ai/opencode.md) or [Visual Studio Code](docs/mission-ai/vscode.md). A [Codex CLI trial](docs/mission-ai/codex.md) is also documented, but the Mission AI gateway's Responses API compatibility remains unverified. A Claude Code setup has not been tested or documented here. If you do not already have a Mission AI API key, contact the SI Team for more information.
+Start with [OpenCode](docs/mission-ai/opencode.md) or [Visual Studio Code](docs/mission-ai/vscode.md). If you do not already have a Mission AI API key, contact the SI Team for more information. [Codex](docs/mission-ai/codex.md) and [Claude Code](docs/mission-ai/claude-code.md) are **unvalidated trials**: confirm the required gateway interface with the service owner before using them.
+
+## Client versions and credentials
+
+- **OpenCode:** these guides and templates support V2 only, matching the SI-supported machines. Check `opencode --version` before configuring it. Discover users should load the provided module.
+- **Credentials:** follow [Security](SECURITY.md). V2 OpenCode templates use `NASA_CHAT_API_KEY` or `NASA_MISSION_AI_API_KEY` environment references as shipped; the guides explain the approved `/connect` alternative. VS Code uses its local secret storage. Signing into GitHub with `gh` does **not** authenticate either NASA service.
+- **Models:** the OpenCode V2 templates are the reference inventory for these examples, not a guarantee of service availability or approval. Client API support differs, so the VS Code templates intentionally contain a subset. Service owners remain authoritative.
 
 ## Scope
 
@@ -34,20 +40,23 @@ The NASA Chat and Mission AI endpoint and model information here is for GMAO use
 
 ## Templates
 
-- [NASA Chat OpenCode](templates/nasa-chat/opencode.jsonc.example)
-- [NASA Chat VS Code](templates/nasa-chat/chatLanguageModels.json.example)
-- [NASA Chat Claude Code](templates/nasa-chat/claude-code-settings.json.example)
-- [NASA Chat Codex](templates/nasa-chat/codex.config.toml.example)
-- [Mission AI OpenCode](templates/mission-ai/opencode.jsonc.example)
-- [Mission AI VS Code](templates/mission-ai/chatLanguageModels.json.example)
-- [Mission AI Codex](templates/mission-ai/codex.config.toml.example)
+| Client | NASA Chat | Mission AI |
+| --- | --- | --- |
+| OpenCode V2 | [Template](templates/nasa-chat/opencode.jsonc.example) | [Template](templates/mission-ai/opencode.jsonc.example) |
+| VS Code | [Template](templates/nasa-chat/chatLanguageModels.json.example) | [Template](templates/mission-ai/chatLanguageModels.json.example) |
+| Claude Code | [Template](templates/nasa-chat/claude-code-settings.json.example) | [Unvalidated trial](templates/mission-ai/claude-code-settings.json.example) |
+| Codex | [Template](templates/nasa-chat/codex.config.toml.example) | [Unvalidated trial](templates/mission-ai/codex.config.toml.example) |
 
-Copy a template to the client configuration location documented in its guide. Keep credentials in the approved local secret store or environment; never put a secret in the copied configuration.
+Merge a template into the client configuration location documented in its guide; do not overwrite unrelated settings. The `.example` suffix is for this repository, not the installed filename. Keep credentials in the approved local secret store or environment; never put a secret in the copied configuration.
+
+The OpenCode templates block the built-in `opencode`, `azure`, and `amazon-bedrock` providers. This is a blocklist, **not** a NASA-only allowlist or a filter by model origin. Other configured providers can remain available. Use only approved models, including any models offered through enterprise GitHub Copilot.
 
 ## References
 
-- [OpenCode configuration](https://opencode.ai/docs/config/)
-- [OpenCode providers](https://opencode.ai/docs/providers/)
+- [OpenCode V2 configuration](https://opencode.ai/v2/docs/config)
+- [OpenCode V2 providers and credentials](https://opencode.ai/v2/docs/cli/providers)
+- [VS Code custom language models](https://code.visualstudio.com/docs/agent-customization/language-models)
+- [GitHub CLI examples](https://cli.github.com/manual/examples)
 - [Claude Code settings](https://code.claude.com/docs/en/settings)
 - [Claude Code LLM gateways](https://code.claude.com/docs/en/llm-gateway)
 - [NASA Chat OpenCode integration reference](https://docs.asksage.ai/integrations/opencode/)

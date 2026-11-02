@@ -1,9 +1,9 @@
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://proxy.fast.luna.nasa.gov",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-5.5",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5.5",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-5.5",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-5-5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5-5",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-5-5",
     "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1"
   },
   "model": "sonnet"

@@ -1,30 +1,54 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "disabled_providers":
-   [
-      "azure",
-      "amazon-bedrock",
-      "opencode"
-   ],
   "share": "disabled",
-  "provider": {
+  "policies": [
+    { "action": "provider.use", "resource": "opencode", "effect": "deny" },
+    { "action": "provider.use", "resource": "azure", "effect": "deny" },
+    { "action": "provider.use", "resource": "amazon-bedrock", "effect": "deny" }
+  ],
+  "providers": {
     "nasa_chat_anthropic": {
-      "npm": "@ai-sdk/anthropic",
       "name": "NASA Chat (Anthropic)",
-      "options": {
-        "baseURL": "https://api.asksage.ai.nasa.gov/server/anthropic/v1"
+      "package": "aisdk:@ai-sdk/anthropic",
+      "settings": {
+        "baseURL": "https://api.asksage.ai.nasa.gov/server/anthropic/v1",
+        "apiKey": "{env:NASA_CHAT_API_KEY}"
       },
       "models": {
-        "claude-opus-5-5-gov": { "name": "Claude Opus 5.5" },
-        "claude-sonnet-5-5-gov": { "name": "Claude Sonnet 5.5" },
-        "claude-haiku-5-5": { "name": "Claude Haiku 5.5" }
+        // Ask Sage doesn't report limits, so set them explicitly (verified by probing).
+        // Without them V2 assumes 200k context / 32k output and compacts far too early.
+        "claude-opus-5-5-gov": {
+          "name": "Claude Opus 5.5",
+          "compatibility": {
+            "cacheFormat": "anthropic",
+            "supportsThinkingBlockBinding": false
+          },
+          "limit": {"context": 1000000, "output": 128000}
+        },
+        "claude-sonnet-5-5-gov": {
+          "name": "Claude Sonnet 5.5",
+          "compatibility": {
+            "cacheFormat": "anthropic",
+            "supportsThinkingBlockBinding": false
+          },
+          "limit": {"context": 1000000, "output": 128000}
+        },
+        "claude-haiku-5-5": {
+          "name": "Claude Haiku 5.5",
+          "compatibility": {
+            "cacheFormat": "anthropic",
+            "supportsThinkingBlockBinding": false
+          },
+          "limit": {"context": 1000000, "output": 128000}
+        }
       }
     },
     "nasa_chat_openai": {
-      "npm": "@ai-sdk/openai",
       "name": "NASA Chat (OpenAI)",
-      "options": {
-        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1"
+      "package": "aisdk:@ai-sdk/openai",
+      "settings": {
+        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1",
+        "apiKey": "{env:NASA_CHAT_API_KEY}"
       },
       "models": {
         "gpt-5.6-sol": { "name": "GPT-5.6 Sol" },
@@ -33,26 +57,29 @@
       }
     },
     "nasa_chat_grok": {
-      "npm": "@ai-sdk/openai-compatible",
       "name": "NASA Chat (xAI)",
-      "options": {
-        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1"
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1",
+        "apiKey": "{env:NASA_CHAT_API_KEY}"
       },
       "models": {
-        "aws-bedrock-grok-4-3-gov": { "name": "Grok 4.3 Gov (OpenAI-Compatible)" }
+        "aws-bedrock-grok-4-3-gov": {
+          "name": "Grok 4.3 Gov (OpenAI-Compatible)"
+        }
       }
     },
     "nasa_chat_google": {
-      "npm": "@ai-sdk/google",
       "name": "NASA Chat (Google Gemini)",
-      "options": {
+      "package": "aisdk:@ai-sdk/google",
+      "settings": {
         "baseURL": "https://api.asksage.ai.nasa.gov/server/google/v1beta",
         // Ask Sage requires the x-access-tokens header; the Google SDK's default
         // x-goog-api-key header alone does not authenticate to Ask Sage.
-        "apiKey": "{env:NASA_CHAT_API_KEY}",
-        "headers": {
-          "x-access-tokens": "{env:NASA_CHAT_API_KEY}"
-        }
+        "apiKey": "{env:NASA_CHAT_API_KEY}"
+      },
+      "headers": {
+        "x-access-tokens": "{env:NASA_CHAT_API_KEY}"
       },
       "models": {
         "google-gemini-4-argon": { "name": "Gemini 4 Argon" },
