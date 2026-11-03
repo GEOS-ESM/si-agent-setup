@@ -4,9 +4,9 @@
     "vendor": "customendpoint",
     "apiType": "chat-completions",
     "models": [
-      { "id": "gpt-5.6-sol", "name": "GPT-5.6 Sol", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
-      { "id": "gpt-5.6-terra", "name": "GPT-5.6 Terra", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
-      { "id": "gpt-5.6-luna", "name": "GPT-5.6 Luna", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 }
+      { "id": "gpt-5.6-sol-gov", "name": "GPT-5.6 Sol Gov", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
+      { "id": "gpt-5.6-terra-gov", "name": "GPT-5.6 Terra Gov", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
+      { "id": "gpt-5.6-luna-gov", "name": "GPT-5.6 Luna Gov", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 }
     ]
   },
   {
