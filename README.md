@@ -56,6 +56,7 @@ The OpenCode templates block the built-in `opencode`, `azure`, and `amazon-bedro
 - [OpenCode V2 configuration](https://opencode.ai/v2/docs/config)
 - [OpenCode V2 providers and credentials](https://opencode.ai/v2/docs/cli/providers)
 - [VS Code custom language models](https://code.visualstudio.com/docs/agent-customization/language-models)
+- [GitHub CLI setup](docs/clients/github-cli.md)
 - [GitHub CLI examples](https://cli.github.com/manual/examples)
 - [Claude Code settings](https://code.claude.com/docs/en/settings)
 - [Claude Code LLM gateways](https://code.claude.com/docs/en/llm-gateway)

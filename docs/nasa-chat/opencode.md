@@ -6,46 +6,25 @@ Before configuring OpenCode, [request NASA Chat access and create an API key](ap
 
 ## Install
 
-On NASA Discover, OpenCode and GitHub CLI (`gh`) are already installed. Load them with:
+On NASA Discover, OpenCode is already installed. Load it with:
 
 ```bash
 module load other/opencode
-module load other/gh
 ```
 
-Check `opencode --version` after loading the module; these instructions require V2.
+Check `opencode --version` after loading the module; these instructions require V2. For optional automatic loading in interactive shells, see [Loading modules on Discover](../clients/discover-modules.md).
 
-On a Mac, install OpenCode V2 and GitHub CLI with Homebrew:
+On a Mac, install OpenCode V2 with Homebrew:
 
 ```bash
 brew install anomalyco/tap/opencode-v2
-brew install gh
 ```
 
-Elsewhere, install OpenCode using the [OpenCode V2 documentation](https://opencode.ai/v2/docs). Install [GitHub CLI](https://cli.github.com/); its [usage examples](https://cli.github.com/manual/examples) show common commands.
+Elsewhere, install OpenCode using the [OpenCode V2 documentation](https://opencode.ai/v2/docs).
 
 ## Sign in to GitHub
 
-`gh` lets the agent work with GitHub issues and pull requests. This login is separate from your NASA Chat API key and does not connect an OpenCode model provider. Use SSH for Git operations as our group recommends:
-
-```bash
-gh auth login --git-protocol ssh
-```
-
-Answer the prompts as follows:
-
-1. **Where do you use GitHub?** Select `GitHub.com`.
-2. **Upload your SSH public key?** If your key is already on your GitHub account, which is the usual case, select `Skip`.
-3. **How would you like to authenticate GitHub CLI?** Select `Login with a web browser`. `gh` shows an 8-character one-time code in the form `XXXX-YYYY`. Open `https://github.com/login/device` on your own computer if the remote session cannot open a browser, and enter the code there. Do not share the code.
-4. Authorize GitHub CLI when prompted.
-
-Confirm both tools are available:
-
-```bash
-opencode --version
-gh --version
-gh auth status
-```
+Follow the [GitHub CLI setup guide](../clients/github-cli.md) to let the agent work with GitHub issues and pull requests. This login is separate from your NASA Chat API key and does not connect an OpenCode model provider.
 
 ## Configure
 
