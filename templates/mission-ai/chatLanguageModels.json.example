@@ -4,18 +4,18 @@
     "vendor": "customendpoint",
     "apiType": "chat-completions",
     "models": [
-      { "id": "claude-opus-5-5", "name": "Claude Opus 5.5", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
-      { "id": "claude-sonnet-5-5", "name": "Claude Sonnet 5.5", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
-      { "id": "claude-haiku-5-5", "name": "Claude Haiku 5.5", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
-      { "id": "gpt-6-astra", "name": "GPT-6 Astra", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
-      { "id": "gpt-6-sol", "name": "GPT-6 Sol", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
-      { "id": "gpt-6-luna", "name": "GPT-6 Luna", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
-      { "id": "gpt-6.1-sol", "name": "GPT-6.1 Sol", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 1000000, "maxOutputTokens": 131072 },
-      { "id": "gpt-5.6-sol", "name": "GPT-5.6 Sol", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
-      { "id": "gpt-5.6-terra", "name": "GPT-5.6 Terra", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
-      { "id": "gpt-5.6-luna", "name": "GPT-5.6 Luna", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000, "supportsReasoningEffort": ["low", "medium", "high"] },
-      { "id": "gemini-4-argon", "name": "Gemini 4 Argon", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 114688, "maxOutputTokens": 16384 },
-      { "id": "gemini-3.8-flash", "name": "Gemini 3.8 Flash", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 983040, "maxOutputTokens": 65536 }
+      { "id": "claude-opus-5-5", "name": "Claude Opus 5.5 (Powerful / Higher cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
+      { "id": "claude-sonnet-5-5", "name": "Claude Sonnet 5.5 (Versatile / Moderate cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
+      { "id": "claude-haiku-5-5", "name": "Claude Haiku 5.5 (Lightweight / Lower cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
+      { "id": "gpt-6-astra", "name": "GPT-6 Astra (Powerful / Higher cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
+      { "id": "gpt-6-sol", "name": "GPT-6 Sol (Powerful / Moderate cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
+      { "id": "gpt-6-luna", "name": "GPT-6 Luna (Lightweight / Lower cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
+      { "id": "gpt-6.1-sol", "name": "GPT-6.1 Sol (Powerful / Moderate cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 1000000, "maxOutputTokens": 131072 },
+      { "id": "gpt-5.6-sol", "name": "GPT-5.6 Sol (Powerful / Higher cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
+      { "id": "gpt-5.6-terra", "name": "GPT-5.6 Terra (Versatile / Moderate cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000 },
+      { "id": "gpt-5.6-luna", "name": "GPT-5.6 Luna (Lightweight / Lower cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 922000, "maxOutputTokens": 128000, "supportsReasoningEffort": ["low", "medium", "high"] },
+      { "id": "gemini-4-argon", "name": "Gemini 4 Argon (Powerful / Moderate cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 114688, "maxOutputTokens": 16384 },
+      { "id": "gemini-3.8-flash", "name": "Gemini 3.8 Flash (Versatile / Lower cost)", "url": "https://proxy.fast.luna.nasa.gov/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 983040, "maxOutputTokens": 65536 }
     ]
   }
 ]

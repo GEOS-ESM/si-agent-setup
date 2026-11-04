@@ -4,9 +4,9 @@
     "vendor": "customendpoint",
     "apiType": "chat-completions",
     "models": [
-      { "id": "gpt-5.6-sol-gov", "name": "GPT-5.6 Sol Gov", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
-      { "id": "gpt-5.6-terra-gov", "name": "GPT-5.6 Terra Gov", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
-      { "id": "gpt-5.6-luna-gov", "name": "GPT-5.6 Luna Gov", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 }
+      { "id": "gpt-5.6-sol-gov", "name": "GPT-5.6 Sol Gov (Powerful / Higher cost)", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
+      { "id": "gpt-5.6-terra-gov", "name": "GPT-5.6 Terra Gov (Versatile / Moderate cost)", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 },
+      { "id": "gpt-5.6-luna-gov", "name": "GPT-5.6 Luna Gov (Lightweight / Lower cost)", "url": "https://api.asksage.ai.nasa.gov/server/openai/v1/chat/completions", "toolCalling": true, "vision": true, "maxInputTokens": 196608, "maxOutputTokens": 32768 }
     ]
   },
   {
@@ -14,9 +14,9 @@
     "vendor": "customendpoint",
     "apiType": "messages",
     "models": [
-      { "id": "claude-opus-5-5-gov", "name": "Claude Opus 5.5", "url": "https://api.asksage.ai.nasa.gov/server/anthropic/v1/messages", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
-      { "id": "claude-sonnet-5-5-gov", "name": "Claude Sonnet 5.5", "url": "https://api.asksage.ai.nasa.gov/server/anthropic/v1/messages", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
-      { "id": "claude-haiku-5-5", "name": "Claude Haiku 5.5", "url": "https://api.asksage.ai.nasa.gov/server/anthropic/v1/messages", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 }
+      { "id": "claude-opus-5-5-gov", "name": "Claude Opus 5.5 (Powerful / Higher cost)", "url": "https://api.asksage.ai.nasa.gov/server/anthropic/v1/messages", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
+      { "id": "claude-sonnet-5-5-gov", "name": "Claude Sonnet 5.5 (Versatile / Moderate cost)", "url": "https://api.asksage.ai.nasa.gov/server/anthropic/v1/messages", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 },
+      { "id": "claude-haiku-5-5", "name": "Claude Haiku 5.5 (Lightweight / Lower cost)", "url": "https://api.asksage.ai.nasa.gov/server/anthropic/v1/messages", "toolCalling": true, "vision": true, "maxInputTokens": 872000, "maxOutputTokens": 128000 }
     ]
   }
 ]

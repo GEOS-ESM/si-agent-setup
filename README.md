@@ -31,6 +31,7 @@ Start with [OpenCode](docs/mission-ai/opencode.md) or [Visual Studio Code](docs/
 - **OpenCode:** these guides and templates support V2 only, matching the SI-supported machines. Check `opencode --version` before configuring it. Discover users should load the provided module.
 - **Credentials:** follow [Security](SECURITY.md). V2 OpenCode templates use `NASA_CHAT_API_KEY` or `NASA_MISSION_AI_API_KEY` environment references as shipped; the guides explain the approved `/connect` alternative. VS Code uses its local secret storage. Signing into GitHub with `gh` does **not** authenticate either NASA service.
 - **Models:** the OpenCode V2 templates are the reference inventory for these examples, not a guarantee of service availability or approval. Client API support differs, so the VS Code templates intentionally contain a subset. Service owners remain authoritative.
+- **Model labels:** capability and relative cost labels are approximate guides based on [GitHub's model categories and reference prices](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), not NASA gateway rates. NASA Chat uses token-based billing, while Mission AI has its own pricing and overhead. Actual usage depends on input, output, caching, and context length; confirm service-specific rates with the service owner. Models without a comparable reference are left unlabeled.
 
 ## Scope
 

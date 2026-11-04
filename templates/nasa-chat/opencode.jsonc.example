@@ -18,7 +18,7 @@
         // Ask Sage doesn't report limits, so set them explicitly (verified by probing).
         // Without them V2 assumes 200k context / 32k output and compacts far too early.
         "claude-opus-5-5-gov": {
-          "name": "Claude Opus 5.5",
+          "name": "Claude Opus 5.5 (Powerful / Higher cost)",
           "compatibility": {
             "cacheFormat": "anthropic",
             "supportsThinkingBlockBinding": false
@@ -26,7 +26,7 @@
           "limit": {"context": 1000000, "output": 128000}
         },
         "claude-sonnet-5-5-gov": {
-          "name": "Claude Sonnet 5.5",
+          "name": "Claude Sonnet 5.5 (Versatile / Moderate cost)",
           "compatibility": {
             "cacheFormat": "anthropic",
             "supportsThinkingBlockBinding": false
@@ -34,7 +34,7 @@
           "limit": {"context": 1000000, "output": 128000}
         },
         "claude-haiku-5-5": {
-          "name": "Claude Haiku 5.5",
+          "name": "Claude Haiku 5.5 (Lightweight / Lower cost)",
           "compatibility": {
             "cacheFormat": "anthropic",
             "supportsThinkingBlockBinding": false
@@ -51,9 +51,9 @@
         "apiKey": "{env:NASA_CHAT_API_KEY}"
       },
       "models": {
-        "gpt-5.6-sol-gov": { "name": "GPT-5.6 Sol Gov" },
-        "gpt-5.6-terra-gov": { "name": "GPT-5.6 Terra Gov" },
-        "gpt-5.6-luna-gov": { "name": "GPT-5.6 Luna Gov" }
+        "gpt-5.6-sol-gov": { "name": "GPT-5.6 Sol Gov (Powerful / Higher cost)" },
+        "gpt-5.6-terra-gov": { "name": "GPT-5.6 Terra Gov (Versatile / Moderate cost)" },
+        "gpt-5.6-luna-gov": { "name": "GPT-5.6 Luna Gov (Lightweight / Lower cost)" }
       }
     },
     "nasa_chat_grok": {
@@ -82,8 +82,8 @@
         "x-access-tokens": "{env:NASA_CHAT_API_KEY}"
       },
       "models": {
-        "google-gemini-4-argon": { "name": "Gemini 4 Argon" },
-        "google-gemini-3.8-flash": { "name": "Gemini 3.8 Flash" }
+        "google-gemini-4-argon": { "name": "Gemini 4 Argon (Powerful / Moderate cost)" },
+        "google-gemini-3.8-flash": { "name": "Gemini 3.8 Flash (Versatile / Lower cost)" }
       }
     }
   }
