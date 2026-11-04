@@ -14,6 +14,23 @@ Private, credential-safe guidance for using coding-agent clients and Visual Stud
 
 SI agent harnesses, including the clients documented in this repository, are not allowed on [NASA Advanced Supercomputing (NAS)](https://www.nas.nasa.gov/) systems. Do not install or configure them there.
 
+## Setup at a glance
+
+```mermaid
+flowchart TD
+    A["Read security guidance and confirm authorization"] --> B["Choose an approved service"]
+    B --> C["NASA Chat"]
+    B --> D["Mission AI"]
+    C --> E["Obtain service access and an API key"]
+    D --> E
+    E --> F["Choose a client and follow its guide"]
+    F --> G["Configure credentials and select an approved model"]
+    G --> H["Verify with a harmless prompt"]
+    F -. "Optional: GitHub issues and pull requests" .-> I["Set up GitHub CLI"]
+```
+
+Choose your service and client from the guides below. For GitHub issue and pull request access, see [GitHub CLI setup](docs/clients/github-cli.md); its login does not authenticate a NASA service.
+
 ## Services
 
 OpenCode and Visual Studio Code are the SI Team's primary clients for these services. The presence of a guide or template does not change the service or system restrictions above.
