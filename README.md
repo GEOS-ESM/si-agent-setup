@@ -27,6 +27,13 @@ flowchart TD
     F --> G["Configure credentials and select an approved model"]
     G --> H["Verify with a harmless prompt"]
     F -. "Optional: GitHub issues and pull requests" .-> I["Set up GitHub CLI"]
+
+    click A href "https://github.com/GEOS-ESM/si-agent-setup/blob/main/SECURITY.md" "Read security guidance"
+    click B href "https://github.com/GEOS-ESM/si-agent-setup#services" "Choose a service"
+    click C href "https://github.com/GEOS-ESM/si-agent-setup#nasa-chat" "NASA Chat guides"
+    click D href "https://github.com/GEOS-ESM/si-agent-setup#mission-ai" "Mission AI guides"
+    click F href "https://github.com/GEOS-ESM/si-agent-setup#services" "Choose a client guide"
+    click I href "https://github.com/GEOS-ESM/si-agent-setup/blob/main/docs/clients/github-cli.md" "GitHub CLI setup"
 ```
 
 Choose your service and client from the guides below. For GitHub issue and pull request access, see [GitHub CLI setup](docs/clients/github-cli.md); its login does not authenticate a NASA service.
