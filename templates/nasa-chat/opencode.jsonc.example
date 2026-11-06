@@ -9,10 +9,10 @@
   "providers": {
     "nasa_chat_anthropic": {
       "name": "NASA Chat (Anthropic)",
+      "env": ["NASA_CHAT_API_KEY"],
       "package": "aisdk:@ai-sdk/anthropic",
       "settings": {
-        "baseURL": "https://api.asksage.ai.nasa.gov/server/anthropic/v1",
-        "apiKey": "{env:NASA_CHAT_API_KEY}"
+        "baseURL": "https://api.asksage.ai.nasa.gov/server/anthropic/v1"
       },
       "models": {
         // Ask Sage doesn't report limits, so set them explicitly (verified by probing).
@@ -45,10 +45,10 @@
     },
     "nasa_chat_openai": {
       "name": "NASA Chat (OpenAI)",
+      "env": ["NASA_CHAT_API_KEY"],
       "package": "aisdk:@ai-sdk/openai",
       "settings": {
-        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1",
-        "apiKey": "{env:NASA_CHAT_API_KEY}"
+        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1"
       },
       "models": {
         "gpt-5.6-sol-gov": { "name": "GPT-5.6 Sol Gov (Powerful / Higher cost)" },
@@ -58,10 +58,10 @@
     },
     "nasa_chat_grok": {
       "name": "NASA Chat (xAI)",
+      "env": ["NASA_CHAT_API_KEY"],
       "package": "aisdk:@ai-sdk/openai-compatible",
       "settings": {
-        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1",
-        "apiKey": "{env:NASA_CHAT_API_KEY}"
+        "baseURL": "https://api.asksage.ai.nasa.gov/server/openai/v1"
       },
       "models": {
         "aws-bedrock-grok-4-3-gov": {
@@ -71,6 +71,7 @@
     },
     "nasa_chat_google": {
       "name": "NASA Chat (Google Gemini)",
+      "env": ["NASA_CHAT_API_KEY"],
       "package": "aisdk:@ai-sdk/google",
       "settings": {
         "baseURL": "https://api.asksage.ai.nasa.gov/server/google/v1beta",

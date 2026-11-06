@@ -6,8 +6,8 @@ Private, credential-safe guidance for using coding-agent clients and Visual Stud
 
 1. Read [Security](SECURITY.md) before configuring a client.
 2. Confirm that your intended data and repository are approved for the service.
-3. Select only the service you are authorized to use.
-4. Follow its client-specific instructions. Do not install a configuration for the other service.
+3. Select only the services you are authorized to use.
+4. Follow the client-specific instructions for those services. Do not install a configuration for a service you are not authorized to use.
 5. Obtain service access and configuration values through the approved GMAO channel. Do not request or add credentials in GitHub issues, pull requests, or chat.
 
 ## NAS restriction
@@ -29,7 +29,7 @@ Start with [OpenCode](docs/mission-ai/opencode.md) or [Visual Studio Code](docs/
 ## Client versions and credentials
 
 - **OpenCode:** these guides and templates support V2 only, matching the SI-supported machines. Check `opencode --version` before configuring it. Discover users should load the provided module.
-- **Credentials:** follow [Security](SECURITY.md). V2 OpenCode templates use `NASA_CHAT_API_KEY` or `NASA_MISSION_AI_API_KEY` environment references as shipped; the guides explain the approved `/connect` alternative. VS Code uses its local secret storage. Signing into GitHub with `gh` does **not** authenticate either NASA service.
+- **Credentials:** follow [Security](SECURITY.md). V2 OpenCode templates support `/connect` where local storage is approved, or environment variables without config edits. A saved account takes precedence. NASA Chat Gemini requires `NASA_CHAT_API_KEY` even when other providers use `/connect`. VS Code uses its local secret storage. Signing into GitHub with `gh` does **not** authenticate either NASA service.
 - **Models:** the OpenCode V2 templates are the reference inventory for these examples, not a guarantee of service availability or approval. Client API support differs, so the VS Code templates intentionally contain a subset. Service owners remain authoritative.
 - **Model labels:** capability and relative cost labels are approximate guides based on [GitHub's model categories and reference prices](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing), not NASA gateway rates. NASA Chat uses token-based billing, while Mission AI has its own pricing and overhead. Actual usage depends on input, output, caching, and context length; confirm service-specific rates with the service owner. Models without a comparable reference are left unlabeled.
 
@@ -48,7 +48,7 @@ The NASA Chat and Mission AI endpoint and model information here is for GMAO use
 | Claude Code | [Template](templates/nasa-chat/claude-code-settings.json.example) | [Unvalidated trial](templates/mission-ai/claude-code-settings.json.example) |
 | Codex | [Template](templates/nasa-chat/codex.config.toml.example) | [Unvalidated trial](templates/mission-ai/codex.config.toml.example) |
 
-Merge a template into the client configuration location documented in its guide; do not overwrite unrelated settings. The `.example` suffix is for this repository, not the installed filename. Keep credentials in the approved local secret store or environment; never put a secret in the copied configuration.
+Merge a template into the client configuration location documented in its guide; do not overwrite unrelated settings. For a fresh OpenCode installation, a chosen example can be copied to `~/.config/opencode/opencode.jsonc` after creating the directory. If `opencode.json` or `opencode.jsonc` already exists there, merge instead. The `.example` suffix is for this repository, not the installed filename. Keep credentials in the approved local secret store or environment; never put a secret in the copied configuration.
 
 The OpenCode templates block the built-in `opencode`, `azure`, and `amazon-bedrock` providers. This is a blocklist, **not** a NASA-only allowlist or a filter by model origin. Other configured providers can remain available. Use only approved models, including any models offered through enterprise GitHub Copilot.
 

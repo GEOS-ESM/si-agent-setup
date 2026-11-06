@@ -9,10 +9,10 @@
   "providers": {
     "nasa_mission_ai": {
       "name": "NASA Mission AI LiteLLM",
+      "env": ["NASA_MISSION_AI_API_KEY"],
       "package": "aisdk:@ai-sdk/openai-compatible",
       "settings": {
-        "baseURL": "https://proxy.fast.luna.nasa.gov",
-        "apiKey": "{env:NASA_MISSION_AI_API_KEY}"
+        "baseURL": "https://proxy.fast.luna.nasa.gov"
       },
       "models": {
         // Explicit limits matter: without them V2 assumes 200k context / 32k output
@@ -28,10 +28,10 @@
     // package above has issues with them on Mission AI.
     "nasa_mission_ai_openai": {
       "name": "NASA Mission AI LiteLLM (OpenAI)",
+      "env": ["NASA_MISSION_AI_API_KEY"],
       "package": "aisdk:@ai-sdk/openai",
       "settings": {
-        "baseURL": "https://proxy.fast.luna.nasa.gov",
-        "apiKey": "{env:NASA_MISSION_AI_API_KEY}"
+        "baseURL": "https://proxy.fast.luna.nasa.gov"
       },
       "models": {
         "gpt-6-astra": { "name": "GPT-6 Astra (Powerful / Higher cost)", "limit": { "context": 1050000, "output": 128000 } },

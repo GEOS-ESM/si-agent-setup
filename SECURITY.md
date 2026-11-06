@@ -13,7 +13,7 @@ Repository history is durable. Removing a secret from a later commit does not ma
 
 Use the organization-approved credential mechanism. When a client supports environment-variable or file references, keep the secret outside the client configuration file. Do not put credential exports in a shell startup file unless the service owner has approved that approach and the file permissions are appropriate.
 
-Do not use an interactive client command that persists credentials locally unless it is approved for the service and device. For example, OpenCode's `/connect` stores credentials locally; prefer the provider-approved method when an environment reference or managed configuration is available.
+Do not use an interactive client command that persists credentials locally unless it is approved for the service and device. OpenCode's `/connect` stores credentials in the server's local database; protect that database and its backups. Environment variables can also expose secrets through processes, diagnostics, or shell history. Use the provider-approved method for your device.
 
 ## Data and network controls
 
