@@ -26,7 +26,7 @@ flowchart TD
     E --> F["Choose a client and follow its guide"]
     F --> G["Configure credentials and select an approved model"]
     G --> H["Verify with a harmless prompt"]
-    F -. "Optional: GitHub issues and pull requests" .-> I["Set up GitHub CLI"]
+    F -. "Optional: let the agent work with GitHub issues and PRs" .-> I["Set up GitHub CLI"]
 
     click A href "https://github.com/GEOS-ESM/si-agent-setup/blob/main/SECURITY.md" "Read security guidance"
     click B href "https://github.com/GEOS-ESM/si-agent-setup#services" "Choose a service"
