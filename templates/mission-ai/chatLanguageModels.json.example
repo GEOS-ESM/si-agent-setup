@@ -1,6 +1,6 @@
 [
   {
-    "name": "NASA Mission AI LiteLLM",
+    "name": "NASA Mission Intelligence LiteLLM",
     "vendor": "customendpoint",
     "apiType": "chat-completions",
     "models": [

@@ -1,6 +1,6 @@
 # NASA Chat with Claude Code
 
-Use this guide only if you are authorized to use NASA Chat. Claude Code uses NASA Chat's Anthropic-compatible gateway. It does not configure Mission AI.
+Use this guide only if you are authorized to use NASA Chat. Claude Code uses NASA Chat's Anthropic-compatible gateway. It does not configure Mission Intelligence.
 
 Before configuring Claude Code, [request NASA Chat access and create an API key](api-key.md).
 

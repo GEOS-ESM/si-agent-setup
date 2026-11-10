@@ -1,6 +1,6 @@
 # NASA Chat with Visual Studio Code
 
-Use this guide only if you are authorized to use NASA Chat. The template configures NASA Chat's OpenAI-compatible and Anthropic-compatible custom language models, but does not configure Mission AI.
+Use this guide only if you are authorized to use NASA Chat. The template configures NASA Chat's OpenAI-compatible and Anthropic-compatible custom language models, but does not configure Mission Intelligence.
 
 Before configuring Visual Studio Code, [request NASA Chat access and create an API key](api-key.md).
 

@@ -8,7 +8,7 @@
   ],
   "providers": {
     "nasa_mission_ai": {
-      "name": "NASA Mission AI LiteLLM",
+      "name": "NASA Mission Intelligence LiteLLM",
       "env": ["NASA_MISSION_AI_API_KEY"],
       "package": "aisdk:@ai-sdk/openai-compatible",
       "settings": {
@@ -25,9 +25,9 @@
       }
     },
     // OpenAI models use the native OpenAI provider package; the openai-compatible
-    // package above has issues with them on Mission AI.
+    // package above has issues with them on Mission Intelligence.
     "nasa_mission_ai_openai": {
-      "name": "NASA Mission AI LiteLLM (OpenAI)",
+      "name": "NASA Mission Intelligence LiteLLM (OpenAI)",
       "env": ["NASA_MISSION_AI_API_KEY"],
       "package": "aisdk:@ai-sdk/openai",
       "settings": {

@@ -1,6 +1,6 @@
-# Mission AI with OpenCode V2
+# Mission Intelligence with OpenCode V2
 
-Use this guide only if you are authorized to use NASA Mission AI. It configures the Mission AI LiteLLM provider only and does not configure NASA Chat. If you do not already have a Mission AI API key, contact the SI Team for more information.
+Use this guide only if you are authorized to use NASA Mission Intelligence. It configures the Mission Intelligence LiteLLM provider only and does not configure NASA Chat. If you do not already have a Mission Intelligence API key, contact the SI Team for more information.
 
 ## Install
 
@@ -22,13 +22,13 @@ Elsewhere, install OpenCode using the [OpenCode V2 documentation](https://openco
 
 ## Sign in to GitHub
 
-Follow the [GitHub CLI setup guide](../clients/github-cli.md) to let the agent work with GitHub issues and pull requests. This login is separate from your Mission AI API key and does not connect an OpenCode model provider.
+Follow the [GitHub CLI setup guide](../clients/github-cli.md) to let the agent work with GitHub issues and pull requests. This login is separate from your Mission Intelligence API key and does not connect an OpenCode model provider.
 
 ## Configure
 
-1. Merge the [Mission AI OpenCode V2 template](../../templates/mission-ai/opencode.jsonc.example) into `~/.config/opencode/opencode.jsonc`. Do not replace unrelated providers, plugins, or preferences.
+1. Merge the [Mission Intelligence OpenCode V2 template](../../templates/mission-ai/opencode.jsonc.example) into `~/.config/opencode/opencode.jsonc`. Do not replace unrelated providers, plugins, or preferences.
 2. Configure credentials using one of the approved methods below.
-3. Start OpenCode and select an available Mission AI model with `/models`. The template separates Claude/Gemini (`nasa_mission_ai`) from GPT (`nasa_mission_ai_openai`), using different provider packages. For example, `nasa_mission_ai_openai/gpt-5.6-luna` selects GPT through Mission AI.
+3. Start OpenCode and select an available Mission Intelligence model with `/models`. The template separates Claude/Gemini (`nasa_mission_ai`) from GPT (`nasa_mission_ai_openai`), using different provider packages. For example, `nasa_mission_ai_openai/gpt-5.6-luna` selects GPT through Mission Intelligence.
 4. Run `opencode models` to check the available model IDs. Send a harmless prompt to the selected model to verify authentication; appearing in the list alone is not an end-to-end test.
 
 ### Credentials
@@ -43,7 +43,7 @@ OpenCode saves `/connect` credentials in the **server's SQLite database**, usual
 
 OpenCode reloads configuration changes automatically; use `/reload` if needed. Terminal preferences are separate, in `~/.config/opencode/cli.json`.
 
-The template does not set a default model; choose an available Mission AI model in `/models`.
+The template does not set a default model; choose an available Mission Intelligence model in `/models`.
 
 The OpenCode base URL shown in the template matches a working OpenCode setup without `/v1`. The VS Code template uses a full `/v1/chat/completions` URL; use the URL for the specific client you are configuring. If an existing local OpenCode provider has a different ID, use that ID in your model selections and authenticate the corresponding provider.
 

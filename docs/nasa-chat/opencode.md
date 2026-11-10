@@ -1,6 +1,6 @@
 # NASA Chat with OpenCode V2
 
-Use this guide only if you are authorized to use NASA Chat. It configures the Anthropic-compatible, OpenAI-compatible, xAI (Grok), and Google Gemini NASA Chat providers, but does not configure Mission AI.
+Use this guide only if you are authorized to use NASA Chat. It configures the Anthropic-compatible, OpenAI-compatible, xAI (Grok), and Google Gemini NASA Chat providers, but does not configure Mission Intelligence.
 
 Before configuring OpenCode, [request NASA Chat access and create an API key](api-key.md).
 

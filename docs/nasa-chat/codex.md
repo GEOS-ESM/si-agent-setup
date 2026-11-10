@@ -1,6 +1,6 @@
 # NASA Chat with Codex CLI
 
-Use this guide only if you are authorized to use NASA Chat. This configures NASA Chat's OpenAI-compatible gateway, not Mission AI.
+Use this guide only if you are authorized to use NASA Chat. This configures NASA Chat's OpenAI-compatible gateway, not Mission Intelligence.
 
 Before configuring Codex, [request NASA Chat access and create an API key](api-key.md).
 

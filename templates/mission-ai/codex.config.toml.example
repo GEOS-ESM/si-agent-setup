@@ -1,8 +1,8 @@
 # Merge this provider table into ~/.codex/config.toml; do not replace other settings.
 # Supply NASA_MISSION_AI_API_KEY through an approved environment mechanism.
-# Mission AI /v1/responses compatibility has not been validated for this deployment.
+# Mission Intelligence /v1/responses compatibility has not been validated for this deployment.
 [model_providers.nasa_mission_ai]
-name = "NASA Mission AI LiteLLM"
+name = "NASA Mission Intelligence LiteLLM"
 base_url = "https://proxy.fast.luna.nasa.gov/v1"
 wire_api = "responses"
 env_key = "NASA_MISSION_AI_API_KEY"
