@@ -15,9 +15,9 @@ VS Code stores the key in local secret storage. It may add a local reference suc
 
 ## Model coverage and limits
 
-The template uses the gateway's `/v1/chat/completions` interface for Claude, GPT, and Gemini. It does not depend on OpenCode being installed or use OpenCode's provider packages. The LiteLLM Connector extension is not required: this deployment returned 403 for `/model/info` during testing, so that extension could not discover models even though `/v1/models` worked.
+The template uses the gateway's `/v1/chat/completions` interface for Claude, GPT, and Gemini. It does not depend on OpenCode being installed or use OpenCode's provider packages. The LiteLLM Connector extension is not required: `/model/info` returned 403 with one key but succeeded with a more privileged key. The extension has not been tested with the latter.
 
-GPT limits use gateway-reported input and output maxima. Claude also reserves output within the OpenCode V2 total context budget.
+GPT limits use gateway-reported input and output maxima. The OpenCode GPT context budgets sum those maxima, but the gateway inventory does not establish whether both can be used together; confirm combined limits with the service owner. Claude also reserves output within the OpenCode V2 total context budget.
 
 Mission Intelligence reports maximum input and output of 1,048,576 tokens each for Gemini 4 Carbon and Hydrogen, but that does not establish their combined context window or usable output limit. Both client templates provisionally use a 1,048,576-token context and cap output at 32,000; VS Code reserves that output from the input budget. Confirm the limits with the service owner before raising them.
 

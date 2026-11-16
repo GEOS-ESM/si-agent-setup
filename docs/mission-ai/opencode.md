@@ -28,7 +28,7 @@ Follow the [GitHub CLI setup guide](../clients/github-cli.md) to let the agent w
 
 1. Merge the [Mission Intelligence OpenCode V2 template](../../templates/mission-ai/opencode.jsonc.example) into `~/.config/opencode/opencode.jsonc`. Do not replace unrelated providers, plugins, or preferences.
 2. Configure credentials using one of the approved methods below.
-3. Start OpenCode and select an available Mission Intelligence model with `/models`. The template separates Claude/Gemini (`nasa_mission_ai`) from GPT (`nasa_mission_ai_openai`), using different provider packages. For example, `nasa_mission_ai_openai/gpt-5.6-luna` selects GPT through Mission Intelligence.
+3. Start OpenCode and select an available Mission Intelligence model with `/models`. The template separates Claude/Gemini (`nasa_mission_ai`) from GPT (`nasa_mission_ai_openai`), using different provider packages. For example, `nasa_mission_ai_openai/gpt-6-luna` selects GPT through Mission Intelligence.
 4. Run `opencode models` to check the available model IDs. Send a harmless prompt to the selected model to verify authentication; appearing in the list alone is not an end-to-end test.
 
 ### Credentials
