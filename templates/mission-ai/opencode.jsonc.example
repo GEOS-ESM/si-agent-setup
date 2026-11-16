@@ -20,8 +20,9 @@
         "claude-opus-5-5": { "name": "Claude Opus 5.5 (Powerful / Higher cost)", "compatibility": { "cacheFormat": "anthropic" }, "limit": { "context": 1000000, "output": 128000 } },
         "claude-sonnet-5-5": { "name": "Claude Sonnet 5.5 (Versatile / Moderate cost)", "compatibility": { "cacheFormat": "anthropic" }, "limit": { "context": 1000000, "output": 128000 } },
         "claude-haiku-5-5": { "name": "Claude Haiku 5.5 (Lightweight / Lower cost)", "compatibility": { "cacheFormat": "anthropic" }, "limit": { "context": 1000000, "output": 128000 } },
-        "gemini-4-argon": { "name": "Gemini 4 Argon (Powerful / Moderate cost)" },
-        "gemini-3.8-flash": { "name": "Gemini 3.8 Flash (Versatile / Lower cost)", "limit": { "context": 1048576, "output": 65536 } }
+        // shortcut: Carbon and Hydrogen use provisional context and output caps; update when Mission Intelligence confirms usable limits.
+        "gemini-4-carbon": { "name": "Gemini 4 Carbon (Powerful / Moderate cost)", "limit": { "context": 1048576, "output": 32000 } },
+        "gemini-4-hydrogen": { "name": "Gemini 4 Hydrogen (Versatile / Moderate cost)", "limit": { "context": 1048576, "output": 32000 } }
       }
     },
     // OpenAI models use the native OpenAI provider package; the openai-compatible

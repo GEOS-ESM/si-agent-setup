@@ -45,6 +45,8 @@ OpenCode reloads configuration changes automatically; use `/reload` if needed. T
 
 The template does not set a default model; choose an available Mission Intelligence model in `/models`.
 
+Gemini 4 Carbon and Hydrogen have provisional token limits; see [model coverage and limits](vscode.md#model-coverage-and-limits). They replace Argon and Gemini 3.8 Flash in the template; existing configurations may still list the older models.
+
 The OpenCode base URL shown in the template matches a working OpenCode setup without `/v1`. The VS Code template uses a full `/v1/chat/completions` URL; use the URL for the specific client you are configuring. If an existing local OpenCode provider has a different ID, use that ID in your model selections and authenticate the corresponding provider.
 
 The template blocks `opencode`, `azure`, and `amazon-bedrock` through `policies`. This does not block every other provider or determine whether a model is approved. Use only authorized models and endpoints. Diagnostics may contain resolved credentials; redact them before sharing.
